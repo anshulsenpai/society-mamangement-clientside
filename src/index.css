@@ -26,3 +26,16 @@ body {
     font-size: 15px;
     margin: 5px;
 }
+
+.mui--icons {
+    color: whitesmoke;
+}
+
+
+li, ul{
+    list-style: none;
+}
+
+.active {
+    transform: translateX(-100%);
+}

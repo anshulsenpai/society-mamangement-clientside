@@ -8,13 +8,13 @@ const Login = () => {
       <Left>
         <BgImg src={loginBgImg} />
         <BrandNTitle>
-          <h1>Fly <span>High</span></h1>
+          <h1>Fly<span>High</span></h1>
           <p>One Community, One Solution: Streamlining Society Management for a Better Neighborhood</p>
         </BrandNTitle>
       </Left>
       <Right>
         <Branding>
-          <h2>Fly <span>High</span></h2>
+          <h2>Fly<span>High</span></h2>
         </Branding>
         <LoginForm>
           <InputField>

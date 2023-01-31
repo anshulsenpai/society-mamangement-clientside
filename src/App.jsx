@@ -1,4 +1,5 @@
-import Login from "./Pages/Login/Login"
+import Home from "./Pages/Home/Home"
+// import Login from "./Pages/Login/Login"
 
 const App = () => {
   // Make routes here 
@@ -6,7 +7,8 @@ const App = () => {
   // Put meaningful comments in code 
   return (
     <div className="app">
-      <Login />
+      {/* <Login /> */}
+      <Home />
     </div>
   )
 }
