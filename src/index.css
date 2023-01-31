@@ -12,3 +12,17 @@ body {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+
+
+.input-field {
+    background-color: transparent;
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    max-width: 100%;
+    color: #bababa;
+    border-radius: 6px;
+    font-size: 15px;
+    margin: 5px;
+}
