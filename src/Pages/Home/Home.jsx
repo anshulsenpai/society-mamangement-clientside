@@ -1,12 +1,18 @@
-import Navbar from "../../Component/Navbar/Navbar"
-import { HomeContainer } from "./Home.styled"
+import Navbar from "../../Component/Navbar/Navbar";
+import { ProMenu } from "../../Component/ProfileMenu/ProfileMenu.styled";
+import SideMenu from "../../Component/SideMenu/SideMenu";
+import { HContainer } from "./Home.styled";
 
 const Home = () => {
   return (
-    <HomeContainer>
-        <Navbar />
-    </HomeContainer>
-  )
-}
+    <>
+      <Navbar/>
+      <HContainer>
+        <SideMenu />
+        <ProMenu />
+      </HContainer>
+    </>
+  );
+};
 
-export default Home
+export default Home;

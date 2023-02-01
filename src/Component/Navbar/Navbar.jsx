@@ -1,37 +1,26 @@
-import {
-  Aside,
-  Bars,
-  LeftNav,
-  NavbarContainer,
-  NavBranding,
-  RightNav,
-  SlideMenuBtn,
-} from "./Navbar.styled";
+import { Aside, Branding, NavContainer, NavItem, NavItems, RightNav } from "./Navbar.styled";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Badge } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
 
 const Navbar = () => {
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isNavActive, setIsNavActive] = useState(false)
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen)
+    const toggleNav = () => {
+        setIsNavActive(!isNavActive)
     }
 
   return (
-    <NavbarContainer>
-      <LeftNav>
-        <SlideMenuBtn onClick={toggleMenu}>
-          <Bars type="top"></Bars>
-          <Bars type="mid"></Bars>
-          <Bars type="small"></Bars>
-        </SlideMenuBtn>
-        <NavBranding>
-          <h1>Fly<span>High</span></h1>
-        </NavBranding>
-      </LeftNav>
+    <NavContainer>
+      <Branding>
+        <MenuIcon onClick={toggleNav} className="mui--icons"/>
+        <h1>
+          Fly<span>High</span>
+        </h1>
+      </Branding>
       <RightNav>
         <Badge badgeContent={4} color="primary">
           <NotificationsNoneIcon className="mui--icons" />
@@ -40,18 +29,18 @@ const Navbar = () => {
           <ShoppingCartIcon className="mui--icons" />
         </Badge>
       </RightNav>
-      <Aside className={!isMenuOpen ? "active" : null}>
-        <ul>
-          <li>Home</li>
-          <li>Manage Visitors</li>
-          <li>Meetings & Events</li>
-          <li>Billing & Maintenance</li>
-          <li>Complaints</li>
-          <li>Voting</li>
-        </ul>
+      <Aside className={!isNavActive ? "active" : null}>
+        <NavItems>
+            <NavItem>Home</NavItem>
+            <NavItem>Manage Visitors</NavItem>
+            <NavItem>Meetings & Events</NavItem>
+            <NavItem>Billing & Maintenance</NavItem>
+            <NavItem>Complaints</NavItem>
+            <NavItem>Voting</NavItem>
+        </NavItems>
       </Aside>
-    </NavbarContainer>
+    </NavContainer>
   );
 };
 
-export default Navbar;
+export default Navbar
