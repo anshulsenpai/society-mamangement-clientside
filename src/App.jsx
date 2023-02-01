@@ -1,3 +1,6 @@
+import { Route, Routes } from "react-router-dom"
+// import Navbar from "./Component/Navbar/Navbar"
+import Home from "./Pages/Home/Home"
 import Login from "./Pages/Login/Login"
 
 const App = () => {
@@ -6,7 +9,11 @@ const App = () => {
   // Put meaningful comments in code 
   return (
     <div className="app">
-      <Login />
+      {/* <Navbar /> */}
+      <Routes>
+        <Route path="/login" element={<Login />}/>
+        <Route path="/" element={<Home />}/>
+      </Routes>
     </div>
   )
 }

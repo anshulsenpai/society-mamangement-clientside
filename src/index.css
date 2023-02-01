@@ -11,4 +11,29 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(45deg, #131A31, #02000E);
+    background-repeat: no-repeat;
+}
+
+.mui--icons {
+    color: whitesmoke;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.active {
+    transform: translateX(-100%);
+}
+
+.menu-toggle-icon {
+    display: none !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu-toggle-icon {
+        display: block !important;
+    }
 }
