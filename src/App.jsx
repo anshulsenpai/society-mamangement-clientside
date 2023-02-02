@@ -1,7 +1,9 @@
 import { Route, Routes } from "react-router-dom"
+import AddVisitor from "./Pages/AddVisitor/AddVisitor"
 // import Navbar from "./Component/Navbar/Navbar"
 import Home from "./Pages/Home/Home"
 import Login from "./Pages/Login/Login"
+import ManageVisitors from "./Pages/ManageVisitors/ManageVisitors"
 
 const App = () => {
   // Make routes here 
@@ -13,6 +15,8 @@ const App = () => {
       <Routes>
         <Route path="/login" element={<Login />}/>
         <Route path="/" element={<Home />}/>
+        <Route path="/manage-visitors" element={<ManageVisitors />}/>
+        <Route path="/add-visitors" element={<AddVisitor />}/>
       </Routes>
     </div>
   )
