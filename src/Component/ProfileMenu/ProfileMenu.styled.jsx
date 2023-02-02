@@ -62,4 +62,9 @@ export const MenuItem = styled.li`
     font-size: 14px;
     padding: 10px;
     cursor: pointer;
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+        font-weight: 600;
+    }
 `
