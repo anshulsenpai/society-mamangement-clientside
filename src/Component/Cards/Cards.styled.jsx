@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-    width: 14em;
+    width: 12em;
     min-height: 16em;
     /* border: 1px solid greenyellow; */
     display: flex;
