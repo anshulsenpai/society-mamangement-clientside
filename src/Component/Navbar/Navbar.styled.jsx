@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 // navbar-2 styling here
@@ -74,7 +75,7 @@ export const NavItems = styled.ul`
     flex-direction: column;
 `
 
-export const NavItem = styled.li`
+export const NavItem = styled(Link)`
     color: whitesmoke;
     font-size: 16px;
     width: 100%;

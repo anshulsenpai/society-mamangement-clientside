@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const SMenuContainer = styled.div`
@@ -28,7 +29,7 @@ export const SMenuItems = styled.ul`
     width: 100%;
 `
 
-export const SMenuItem = styled.li`
+export const SMenuItem = styled(Link)`
     width: 100%;
     color: white;
     /* border: 1px solid green; */

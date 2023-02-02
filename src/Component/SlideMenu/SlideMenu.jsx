@@ -5,12 +5,12 @@ const SideMenu = () => {
   return (
     <SMenuContainer>
       <SMenuItems>
-        <SMenuItem>Home</SMenuItem>
-        <SMenuItem>Manage Visitors</SMenuItem>
-        <SMenuItem>Meetings & Events</SMenuItem>
-        <SMenuItem>Billing & Maintenance</SMenuItem>
-        <SMenuItem>Complaints</SMenuItem>
-        <SMenuItem>Voting</SMenuItem>
+        <SMenuItem to='/'>Home</SMenuItem>
+        <SMenuItem to='/manage-visitors'>Manage Visitors</SMenuItem>
+        <SMenuItem to='/meetings-events'>Meetings & Events</SMenuItem>
+        <SMenuItem to='/bills'>Billing & Maintenance</SMenuItem>
+        <SMenuItem to='/complaints'>Complaints</SMenuItem>
+        <SMenuItem to='/voting'>Voting</SMenuItem>
       </SMenuItems>
     </SMenuContainer>
   );

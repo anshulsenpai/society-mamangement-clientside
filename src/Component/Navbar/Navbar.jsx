@@ -31,12 +31,12 @@ const Navbar = () => {
       </RightNav>
       <Aside className={!isNavActive ? "active" : null}>
         <NavItems>
-            <NavItem>Home</NavItem>
-            <NavItem>Manage Visitors</NavItem>
-            <NavItem>Meetings & Events</NavItem>
-            <NavItem>Billing & Maintenance</NavItem>
-            <NavItem>Complaints</NavItem>
-            <NavItem>Voting</NavItem>
+            <NavItem to='/'>Home</NavItem>
+            <NavItem to='/manage-visitors'>Manage Visitors</NavItem>
+            <NavItem to='/meetings-events'>Meetings & Events</NavItem>
+            <NavItem to='/bills'>Billing & Maintenance</NavItem>
+            <NavItem to='/complaints'>Complaints</NavItem>
+            <NavItem to='/voting'>Voting</NavItem>
         </NavItems>
       </Aside>
     </NavContainer>
