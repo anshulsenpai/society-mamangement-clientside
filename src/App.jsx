@@ -6,7 +6,9 @@ import Complaints from "./Pages/Complaints/Complaints"
 import Home from "./Pages/Home/Home"
 import Login from "./Pages/Login/Login"
 import ManageVisitors from "./Pages/ManageVisitors/ManageVisitors"
+import Marketplace from "./Pages/Marketplace/Marketplace"
 import Meeting from "./Pages/Meetings/Meeting"
+import MyProfile from "./Pages/MyProfile/MyProfile"
 import Voting from "./Pages/Voting/Voting"
 
 const App = () => {
@@ -25,6 +27,8 @@ const App = () => {
         <Route path="/bills" element={<Bills />}/>
         <Route path="/complaints" element={<Complaints />}/>
         <Route path="/voting" element={<Voting />}/>
+        <Route path="/marketplace" element={<Marketplace />}/>
+        <Route path="/my-profile" element={<MyProfile />}/>
       </Routes>
     </div>
   )

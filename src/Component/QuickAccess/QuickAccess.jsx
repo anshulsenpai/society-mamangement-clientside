@@ -22,7 +22,7 @@ const QuickAccess = () => {
             <img src={icon3} alt="icon" />
             <label>Meetings</label>
         </QuickBox>
-        <QuickBox to='/'>
+        <QuickBox to='/marketplace'>
             <img src={icon5} alt="icon" />
             <label>Marketplace</label>
         </QuickBox>

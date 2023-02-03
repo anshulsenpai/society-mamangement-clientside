@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ProMenuContainer = styled.div`
@@ -57,7 +58,7 @@ export const MenuCenter = styled.ul`
     margin: 1em;
 `
 
-export const MenuItem = styled.li`
+export const MenuItem = styled(Link)`
     color: whitesmoke;
     font-size: 14px;
     padding: 10px;

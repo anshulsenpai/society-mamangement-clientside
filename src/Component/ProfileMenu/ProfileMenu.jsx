@@ -11,11 +11,11 @@ const ProfileMenu = () => {
                 <p>Member</p>
             </MenuTop>
             <MenuCenter>
-                <MenuItem>My Orders</MenuItem>
-                <MenuItem>Manage Account</MenuItem>
-                <MenuItem>Payment History</MenuItem>
-                <MenuItem>Help</MenuItem>
-                <MenuItem>Log out</MenuItem>
+                <MenuItem to="/">My Orders</MenuItem>
+                <MenuItem to="/my-profile">Manage Account</MenuItem>
+                <MenuItem to="/">Payment History</MenuItem>
+                <MenuItem to="/">Help</MenuItem>
+                <MenuItem to="/">Log out</MenuItem>
             </MenuCenter>
         </Menu>
     </ProMenuContainer>
