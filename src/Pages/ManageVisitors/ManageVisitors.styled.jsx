@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const MngVisitorContainer = styled.div`
+  flex: 4;
   width: 100%;
   min-height: 100vh;
   padding: 1em;
@@ -15,6 +16,7 @@ export const MngVisitorContainer = styled.div`
 `;
 
 export const MngActions = styled.div`
+  margin-top: 65px;
   width: 100%;
   /* border: 1px solid blue; */
   display: flex;
@@ -89,7 +91,7 @@ export const TableRows = styled.div`
 `;
 
 export const Row = styled.ul`
-    /* border: 1px solid red; */
+  /* border: 1px solid red; */
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -117,9 +119,6 @@ export const RowData = styled.li`
   /* border: 1px solid green; */
   padding: 5px;
   width: 100%;
-
-
-
 
   @media screen and (max-width: 425px) {
     font-size: 12px;

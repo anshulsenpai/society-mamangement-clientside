@@ -23,8 +23,12 @@ ul, li {
     list-style: none;
 }
 
-.active {
+.active-nav {
     transform: translateX(-100%);
+}
+
+.active {
+    background: rgba(217, 217, 217, 0.1);
 }
 
 .menu-toggle-icon {

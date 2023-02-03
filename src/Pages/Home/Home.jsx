@@ -5,17 +5,20 @@ import Navbar from "../../Component/Navbar/Navbar";
 import ProfileMenu from "../../Component/ProfileMenu/ProfileMenu";
 import SlideMenu from "../../Component/SlideMenu/SlideMenu";
 import { HContainer } from "./Home.styled";
+import Layout from "../../Component/Layout/Layout";
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <HContainer>
-        <SlideMenu />
-        <Main />
-        <ProfileMenu />
+        {/* <SlideMenu /> */}
+        <Layout>
+          <Main />
+        </Layout>
+        {/* <ProfileMenu /> */}
       </HContainer>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };

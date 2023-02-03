@@ -29,7 +29,7 @@ const Navbar = () => {
           <ShoppingCartIcon className="mui--icons" />
         </Badge>
       </RightNav>
-      <Aside className={!isNavActive ? "active" : null}>
+      <Aside className={!isNavActive ? "active-nav" : null}>
         <NavItems>
             <NavItem to='/'>Home</NavItem>
             <NavItem to='/manage-visitors'>Manage Visitors</NavItem>

@@ -1,9 +1,21 @@
-import React from 'react'
+import Layout from "../../Component/Layout/Layout";
+import Navbar from "../../Component/Navbar/Navbar";
+import { VotingContainer, VotingWrapper } from "./Voting.styled";
+
 
 const Voting = () => {
   return (
-    <h1>Voting</h1>
-  )
-}
+    <>
+      <Navbar />
+      <Layout>
+        <VotingContainer>
+          <VotingWrapper>
+            <h1>Voting</h1>
+          </VotingWrapper>
+        </VotingContainer>
+      </Layout>
+    </>
+  );
+};
 
-export default Voting
+export default Voting;

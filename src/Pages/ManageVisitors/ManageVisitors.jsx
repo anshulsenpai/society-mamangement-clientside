@@ -13,14 +13,18 @@ import {
 import AddVisitoIcon from "../../Assets/icons/add-visitor.png";
 import { VisitorsData } from "../../Assets/Data/VisitosData";
 import { Link } from "react-router-dom";
-// import Navbar from "../../Component/Navbar/Navbar";
+import Layout from "../../Component/Layout/Layout";
+import Navbar from "../../Component/Navbar/Navbar";
 // import SideMenu from "../../Component/SlideMenu/SlideMenu";
 
 const ManageVisitors = () => {
   return (
     <>
-    {/* <Navbar />
-    <SideMenu /> */}
+    <Navbar />
+    {/* <SideMenu /> */}
+    <Layout>
+
+
       <MngVisitorContainer>
         <MngActions>
           <Link
@@ -52,6 +56,7 @@ const ManageVisitors = () => {
           </TableRows>
         </VisitorsContainer>
       </MngVisitorContainer>
+      </Layout>
     </>
   );
 };

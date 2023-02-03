@@ -29,23 +29,6 @@ const Main = () => {
         ))}
       </NewsCardContainer>
 
-      {/* market  */}
-      {/* <MarketplaceContainer>
-        <MarketplaceHeading>
-          <p>News</p>
-          <p style={{ cursor: "pointer", fontWeight: "400" }}>More</p>
-        </MarketplaceHeading>
-        {ProductsList?.map((news) => (
-          <Cards
-            key={news.id}
-            image={news.image}
-            title={news.title}
-            desc={news.desc}
-            type={news.type}
-          />
-        ))}
-      </MarketplaceContainer> */}
-
       <NewsCardContainer>
         <NewsContainerHeading>
           <p>Marketplace</p>

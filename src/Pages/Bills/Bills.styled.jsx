@@ -4,12 +4,14 @@ export const BillsContainer = styled.div`
   width: 100%;
   min-height: 100vh;
   padding: 15px;
+  flex: 4;
   display: flex;
-  /* justify-content: center; */
+  /* justify-content: space-between; */
   align-items: center;
   flex-direction: column;
 
   p {
+
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -23,6 +25,7 @@ export const BillsContainer = styled.div`
 `;
 
 export const TableContainer = styled.ul`
+  margin-top: 65px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -49,7 +52,7 @@ export const TableData = styled.li`
   /* border: 1px solid blue; */
   text-align: center;
   font-size: 15px;
-  padding: 15px 0;
+  /* padding: 15px 0; */
 
   @media screen and (max-width: 425px) {
     font-size: 13px;
