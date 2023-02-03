@@ -131,6 +131,16 @@ export const InputField = styled.div`
         font-size: 15px;
         font-weight: 600;
     }
+
+    input {
+        background-color: transparent;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 6px;
+        margin: 10px;
+        color: #bababa;
+    }
+
     @media screen and (max-width: 48em){
         width: 100%;
     }
