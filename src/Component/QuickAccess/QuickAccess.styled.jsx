@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 export const QuickAccessContainer = styled.div`
@@ -18,7 +19,7 @@ export const QuickAccessContainer = styled.div`
   }
 `
 
-export const QuickBox = styled.div`
+export const QuickBox = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;

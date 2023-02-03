@@ -10,23 +10,23 @@ import icon5 from "../../Assets/icons/icon-5.png"
 const QuickAccess = () => {
   return (
     <QuickAccessContainer>
-        <QuickBox>
+        <QuickBox to='/bills'>
             <img src={icon1} alt="icon" />
             <label>Bills</label>
         </QuickBox>
-        <QuickBox>
+        <QuickBox to='/add-visitors'>
             <img src={icon2} alt="icon" />
             <label>Visitors</label>
         </QuickBox>
-        <QuickBox>
+        <QuickBox to='/meetings-events'>
             <img src={icon3} alt="icon" />
             <label>Meetings</label>
         </QuickBox>
-        <QuickBox>
+        <QuickBox to='/'>
             <img src={icon5} alt="icon" />
             <label>Marketplace</label>
         </QuickBox>
-        <QuickBox>
+        <QuickBox to='/meetings-events'>
             <img src={icon4} alt="icon" />
             <label>Events</label>
         </QuickBox>
