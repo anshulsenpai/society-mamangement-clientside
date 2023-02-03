@@ -70,11 +70,3 @@ export const InputField = styled.div`
         font-size: 14px;
     }
 `
-
-// export const CloseBtn = styled.div`
-//     position: absolute;
-//     text-shadow: 2px 2px 2px #000;
-//     z-index: 5;
-//     top: -3em;
-//     right: 0;
-// `

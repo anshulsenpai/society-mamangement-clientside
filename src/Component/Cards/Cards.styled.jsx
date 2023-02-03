@@ -72,5 +72,3 @@ export const CardAction = styled.div`
         }
     }
 `
-
-
