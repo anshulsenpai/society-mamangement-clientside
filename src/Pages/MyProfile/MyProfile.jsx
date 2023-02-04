@@ -7,21 +7,24 @@ import {
   MyProfileContainer,
   MyProfileWrapper,
   ProfileName,
-  Save,
   UserDetails,
   UserInfoFields,
   UserProfilePic,
 } from "./MyProfile.styled";
 import profileAvatar from "../../Assets/icons/Avatar.png";
+import { useSelector } from "react-redux";
 
 const MyProfile = () => {
+
+  const user = useSelector(state => state.user.currentUser.user)
+
   const [clickEdit, setSetClickEdit] = useState(false);
   const [userData, setUserData] = useState({
-    name: "Kunal Shah",
-    email: "kunalshah01@gmail.com",
-    phoneNo: "+919561347845",
-    address: "B Wing Flat 102",
-    type: "Member"
+    name: user.name,
+    email: user.email,
+    phoneNo: user.phone_no,
+    address: user.address,
+    type: user.user_type
   });
 
   const handleEdit = () => {

@@ -28,6 +28,7 @@ export const MenuTop = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-transform: capitalize;
 
     img {
         width: 80px;
@@ -64,6 +65,20 @@ export const MenuItem = styled(Link)`
     padding: 10px;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
+
+    &:hover {
+        font-weight: 600;
+    }
+`
+
+export const Button = styled.button`
+    color: whitesmoke;
+    font-size: 14px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    background-color: transparent;
+    border: none;
 
     &:hover {
         font-weight: 600;

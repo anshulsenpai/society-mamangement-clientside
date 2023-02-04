@@ -1,11 +1,15 @@
-import { Aside, Branding, NavContainer, NavItem, NavItems, RightNav } from "./Navbar.styled";
+import { Aside, Branding, NavContainer, NavItem, NavItems, Profile, ProfileDetails, RightNav } from "./Navbar.styled";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Badge } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import { useState } from "react";
+import profileAvatar from "../../Assets/icons/Avatar.png"
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+
+    const user = useSelector(state => state.user.currentUser.user)
 
     const [isNavActive, setIsNavActive] = useState(false)
 
@@ -31,6 +35,15 @@ const Navbar = () => {
       </RightNav>
       <Aside className={!isNavActive ? "active-nav" : null}>
         <NavItems>
+          <NavItem to='/my-profile'>
+            <Profile>
+              <img src={profileAvatar} alt="profile picture" />
+              <ProfileDetails>
+                <p>{user.name}</p>
+                <label>{user.user_type}</label>
+              </ProfileDetails>
+            </Profile>
+          </NavItem>
             <NavItem to='/'>Home</NavItem>
             <NavItem to='/manage-visitors'>Manage Visitors</NavItem>
             <NavItem to='/meetings-events'>Meetings & Events</NavItem>

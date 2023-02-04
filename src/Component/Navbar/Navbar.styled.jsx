@@ -83,3 +83,28 @@ export const NavItem = styled(Link)`
     padding: 20px;
 
 `
+
+export const Profile = styled.div`
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    gap: 1em;
+`
+
+export const ProfileDetails = styled.div`
+    /* border: 1px solid blue; */
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+
+    p {
+        font-weight: 500;
+        font-size: 1.4em;
+        color: whitesmoke;
+    }
+    label {
+        font-size: 13px;
+        color: #bababa;
+    }
+`
