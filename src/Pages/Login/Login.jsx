@@ -14,6 +14,7 @@ import {
 import loginBgImg from "../../Assets/Images/background.png";
 import { login } from "../../redux/ApiCalls";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -79,6 +80,7 @@ const Login = () => {
           <OtherFormActions>
             <p>Forgot Password?</p>
           </OtherFormActions>
+          <Link style={{"color" : "#bababa"}} to='/register'>New here ? <span style={{"color" : "#083AA9"}}>Register</span></Link>
         </LoginForm>
       </Right>
     </Container>

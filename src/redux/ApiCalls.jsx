@@ -17,3 +17,16 @@ export const login = async (dispatch, user) => {
     }
 };
 
+
+export const register = async (dispatch, user) => {
+    dispatch(loginStart());
+    try {
+        const res = await registerUser(user)
+        dispatch(loginSuccess(res.data));
+        console.log(res)
+    } catch (err) {
+        dispatch(loginFailure());
+    }
+};
+
+

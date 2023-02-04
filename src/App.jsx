@@ -14,6 +14,7 @@ import MyOrder from "./Pages/MyOrders/MyOrder";
 import MyProfile from "./Pages/MyProfile/MyProfile";
 import OrderPlace from "./Pages/OrderPlace/OrderPlace";
 import MyPayment from "./Pages/PaymentHistory/PaymentHistory";
+import Register from "./Pages/Register/Register";
 import Voting from "./Pages/Voting/Voting";
 
 const App = () => {
@@ -61,6 +62,7 @@ const App = () => {
         <Route path="/order-place" element={<OrderPlace />} />
         <Route path="/my-orders" element={<MyOrder />} />
         <Route path="/payments" element={<MyPayment />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );

@@ -64,3 +64,8 @@ a {
 .cart--icon {
     width: fit-content !important;
 }
+
+.sign-up-field {
+    margin: 5px !important;
+    padding: 8px 15px !important;
+}
