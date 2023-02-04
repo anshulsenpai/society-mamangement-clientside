@@ -77,10 +77,10 @@ export const NavItems = styled.ul`
 
 export const NavItem = styled(Link)`
     color: whitesmoke;
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
     /* border: 1px solid green; */
-    padding: 20px;
+    padding: 14px;
 
 `
 

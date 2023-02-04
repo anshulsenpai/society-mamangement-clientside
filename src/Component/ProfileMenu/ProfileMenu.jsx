@@ -23,10 +23,10 @@ const ProfileMenu = () => {
                 <p>{user.user_type}</p>
             </MenuTop>
             <MenuCenter>
-                <MenuItem to="/">My Orders</MenuItem>
+                <MenuItem to="/my-orders">My Orders</MenuItem>
                 <MenuItem to="/my-profile">Manage Account</MenuItem>
-                <MenuItem to="/">Payment History</MenuItem>
-                <MenuItem to="/">Help</MenuItem>
+                <MenuItem to="/payments">Payment History</MenuItem>
+                {/* <MenuItem to="/">Help</MenuItem> */}
                 <Button onClick={handleLogOut} >Log out</Button>
             </MenuCenter>
         </Menu>

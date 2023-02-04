@@ -23,12 +23,12 @@ const Meeting = () => {
       <MeetingContainer>
         <MeetingAction>
           {/* buttons  */}
-          <ButtonIcon>
+          {/* <ButtonIcon>
             <IconImg>
               <img src={MeetingIcon} alt="" />
             </IconImg>
             <label>New Meeting</label>
-          </ButtonIcon>
+          </ButtonIcon> */}
         </MeetingAction>
         <UpcomingMeetingsContainer>
           {/* heading */}

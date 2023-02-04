@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { Navigate, Route, Routes } from "react-router-dom";
 import AddVisitor from "./Pages/AddVisitor/AddVisitor";
 import Bills from "./Pages/Bills/Bills";
+import Cart from "./Pages/Cart/Cart";
 import Complaints from "./Pages/Complaints/Complaints";
 // import Navbar from "./Component/Navbar/Navbar"
 import Home from "./Pages/Home/Home";
@@ -9,7 +10,10 @@ import Login from "./Pages/Login/Login";
 import ManageVisitors from "./Pages/ManageVisitors/ManageVisitors";
 import Marketplace from "./Pages/Marketplace/Marketplace";
 import Meeting from "./Pages/Meetings/Meeting";
+import MyOrder from "./Pages/MyOrders/MyOrder";
 import MyProfile from "./Pages/MyProfile/MyProfile";
+import OrderPlace from "./Pages/OrderPlace/OrderPlace";
+import MyPayment from "./Pages/PaymentHistory/PaymentHistory";
 import Voting from "./Pages/Voting/Voting";
 
 const App = () => {
@@ -53,6 +57,10 @@ const App = () => {
         <Route path="/voting" element={<Voting />} />
         <Route path="/marketplace" element={<Marketplace />} />
         <Route path="/my-profile" element={<MyProfile />} />
+        <Route path="/my-cart" element={<Cart />} />
+        <Route path="/order-place" element={<OrderPlace />} />
+        <Route path="/my-orders" element={<MyOrder />} />
+        <Route path="/payments" element={<MyPayment />} />
       </Routes>
     </div>
   );

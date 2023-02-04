@@ -60,3 +60,7 @@ a {
         font-size: 13px !important;
     }
 }
+
+.cart--icon {
+    width: fit-content !important;
+}

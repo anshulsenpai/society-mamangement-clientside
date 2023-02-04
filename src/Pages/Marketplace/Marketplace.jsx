@@ -18,6 +18,7 @@ const Marketplace = () => {
                 title={item.title}
                 type={item.type}
                 price={item.price}
+                id={item.id}
               />
             ))}
           </MarketplaceWrapper>
