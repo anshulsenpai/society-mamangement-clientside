@@ -12,10 +12,13 @@ import {
   TitleAction,
 } from "./Complaints.styled";
 import complaintIcon from "../../Assets/icons/complaint.png";
-import { complaintsData } from "../../Assets/Data/Complaints.data";
+import { useSelector } from "react-redux";
+// import { complaintsData } from "../../Assets/Data/Complaints.data";
 
 const Complaints = () => {
   const [ShowComplaint, setShowComplaint] = useState(false);
+
+  const complaintsData = useSelector(state => state.complaints.complaints)
 
   const handleReadMore = () => {
     setShowComplaint((prev) => !prev);
@@ -28,17 +31,18 @@ const Complaints = () => {
         <ComplaintContainer>
           <ComplaintWrapper>
             <h2>Complaints</h2>
-            <FileComplaintButton>
+            <FileComplaintButton to='/add-complaint'>
               <FileComplaintIcon>
                 <img src={complaintIcon} alt="" />
               </FileComplaintIcon>
               <label>Add Complaint</label>
             </FileComplaintButton>
             <AllComplaints>
-              {complaintsData?.map((complaint) => (
-                <ComplaintDetail key={complaint.id}>
+              {complaintsData?.map((complaint, id) => (
+                <ComplaintDetail key={id}>
                   <TitleAction>
                     <p>{complaint.title}</p>
+                    {/* <p>{complaint.name}</p> */}
                     <button onClick={handleReadMore}>Read More</button>
                   </TitleAction>
                   <ComplaintDesc>

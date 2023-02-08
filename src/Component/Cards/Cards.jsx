@@ -13,8 +13,10 @@ const Cards = ({ image, title, desc, type, price, id }) => {
   const dispatch = useDispatch();
 
   const handleAddProduct = (item) => {
-    dispatch(addProduct(item));
-    console.log(item);
+    if(item.type === 'product') {
+      dispatch(addProduct(item));
+      console.log(item);
+    }
   };
   
   return (

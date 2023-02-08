@@ -1,3 +1,4 @@
+import { MarketData } from "../../Assets/Data/MarketData";
 import { NewsCards, ProductsList } from "../../Assets/Data/NewsCards";
 import Cards from "../Cards/Cards";
 import QuickAccess from "../QuickAccess/QuickAccess";
@@ -9,6 +10,9 @@ import {
 } from "./Main.styled";
 
 const Main = () => {
+
+  const data = MarketData.slice(0,3)
+
   return (
     <MainContainer>
       <QuickAccess />
@@ -34,7 +38,7 @@ const Main = () => {
           <p>Marketplace</p>
           <p style={{ cursor: "pointer", fontWeight: "400", "fontSize":"13px" }}>More</p>
         </NewsContainerHeading>
-        {ProductsList?.map((item) => (
+        {data?.map((item) => (
           <Cards
             key={item.id}
             image={item.image}

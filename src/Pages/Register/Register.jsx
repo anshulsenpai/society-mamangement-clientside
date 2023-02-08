@@ -109,7 +109,7 @@ const Register = () => {
                 setUserData({ ...userData, address: e.target.value })
               }
               className="sign-up-field input-field input-password"
-              type="password"
+              type="text"
               required="required"
             />
           </InputField>

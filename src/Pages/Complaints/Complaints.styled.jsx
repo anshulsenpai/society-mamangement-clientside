@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ComplaintContainer = styled.div`
@@ -29,7 +30,7 @@ export const ComplaintWrapper = styled.div`
   }
 `;
 
-export const FileComplaintButton = styled.div`
+export const FileComplaintButton = styled(Link)`
   width: 100%;
   gap: 1em;
   display: flex;
@@ -90,6 +91,7 @@ width: 100%;
   justify-content: space-between;
   align-items: center;
   margin: 1em 0;
+  /* flex-direction: column; */
   p {
     color: #cccccc;
     font-size: 15px;

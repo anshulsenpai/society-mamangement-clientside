@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import AddVisitor from "./Pages/AddVisitor/AddVisitor";
 import Bills from "./Pages/Bills/Bills";
 import Cart from "./Pages/Cart/Cart";
+import AddComplaint from "./Pages/Complaints/AddComplaint";
 import Complaints from "./Pages/Complaints/Complaints";
 // import Navbar from "./Component/Navbar/Navbar"
 import Home from "./Pages/Home/Home";
@@ -63,6 +64,8 @@ const App = () => {
         <Route path="/my-orders" element={<MyOrder />} />
         <Route path="/payments" element={<MyPayment />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/add-complaint" element={<AddComplaint />} />
+
       </Routes>
     </div>
   );

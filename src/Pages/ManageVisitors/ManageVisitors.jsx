@@ -18,6 +18,7 @@ import Navbar from "../../Component/Navbar/Navbar";
 // import SideMenu from "../../Component/SlideMenu/SlideMenu";
 
 const ManageVisitors = () => {
+
   return (
     <>
     <Navbar />
@@ -42,7 +43,7 @@ const ManageVisitors = () => {
             <ColHead>Sr.No</ColHead>
             <ColHead>Name</ColHead>
             <ColHead>Date</ColHead>
-            <ColHead>Action</ColHead>
+            {/* <ColHead>Action</ColHead> */}
           </TableHeading>
           <TableRows>
             {VisitorsData?.map((visitor) => (
@@ -50,7 +51,7 @@ const ManageVisitors = () => {
                 <RowData>{visitor.id}</RowData>
                 <RowData>{visitor.name}</RowData>
                 <RowData>{visitor.date}</RowData>
-                <button>Manage</button>
+                {/* <button>Manage</button> */}
               </Row>
             ))}
           </TableRows>

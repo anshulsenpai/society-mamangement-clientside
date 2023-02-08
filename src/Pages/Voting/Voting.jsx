@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CandidateData } from "../../Assets/Data/CandidateData";
 import Layout from "../../Component/Layout/Layout";
 import Navbar from "../../Component/Navbar/Navbar";
@@ -10,6 +11,24 @@ import {
 } from "./Voting.styled";
 
 const Voting = () => {
+  const [selectedCheckbox, setSelectedCheckbox] = useState(null);
+
+  const [isVoted, setIsVoted] = useState(false);
+
+
+  const handleCheckboxChange = (event) => {
+    setSelectedCheckbox(event.target.value);
+  };
+
+  const handleSubmit = () => {
+
+    if (selectedCheckbox !== null) {
+      setIsVoted(true)
+    }else {
+      alert("Please select the right box for vote")
+    }
+  }
+
   return (
     <>
       <Navbar />
@@ -25,11 +44,14 @@ const Voting = () => {
               <CandidateDetails key={candidate.id}>
                 <Row>{candidate.name}</Row>
                 <Row>{candidate.post}</Row>
-                <Row><input type="checkbox"/></Row>
+                <Row><input value={candidate.name}
+                  checked={selectedCheckbox === candidate.name}
+                  onChange={handleCheckboxChange} type="checkbox" /></Row>
               </CandidateDetails>
             ))}
             <VoteActions>
-              <button>Submit</button>
+              {!isVoted && <button onClick={handleSubmit}>Submit</button>}
+              { isVoted && <p style={{"color" : "#bababa"}}>You've already voted</p>}
             </VoteActions>
           </VotingWrapper>
         </VotingContainer>
