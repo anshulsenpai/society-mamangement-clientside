@@ -15,48 +15,53 @@ import { VisitorsData } from "../../Assets/Data/VisitosData";
 import { Link } from "react-router-dom";
 import Layout from "../../Component/Layout/Layout";
 import Navbar from "../../Component/Navbar/Navbar";
+import { useSelector } from "react-redux";
 // import SideMenu from "../../Component/SlideMenu/SlideMenu";
 
 const ManageVisitors = () => {
 
+  const visitors = useSelector(state => state.visitors)
+
+  console.log(visitors)
+
   return (
     <>
-    <Navbar />
-    {/* <SideMenu /> */}
-    <Layout>
+      <Navbar />
+      {/* <SideMenu /> */}
+      <Layout>
 
 
-      <MngVisitorContainer>
-        <MngActions>
-          <Link
-            style={{ display: "flex", alignItems: "center", gap: "1em" }}
-            to="/add-visitors"
-          >
-            <MngVisitorIcon>
-              <IconBtn src={AddVisitoIcon} alt="add visitor icon" />
-            </MngVisitorIcon>
-            <label>Add Visitor</label>
-          </Link>
-        </MngActions>
-        <VisitorsContainer>
-          <TableHeading>
-            <ColHead>Sr.No</ColHead>
-            <ColHead>Name</ColHead>
-            <ColHead>Date</ColHead>
-            {/* <ColHead>Action</ColHead> */}
-          </TableHeading>
-          <TableRows>
-            {VisitorsData?.map((visitor) => (
-              <Row key={visitor.id}>
-                <RowData>{visitor.id}</RowData>
-                <RowData>{visitor.name}</RowData>
-                <RowData>{visitor.date}</RowData>
-                {/* <button>Manage</button> */}
-              </Row>
-            ))}
-          </TableRows>
-        </VisitorsContainer>
-      </MngVisitorContainer>
+        <MngVisitorContainer>
+          <MngActions>
+            <Link
+              style={{ display: "flex", alignItems: "center", gap: "1em" }}
+              to="/add-visitors"
+            >
+              <MngVisitorIcon>
+                <IconBtn src={AddVisitoIcon} alt="add visitor icon" />
+              </MngVisitorIcon>
+              <label>Add Visitor</label>
+            </Link>
+          </MngActions>
+         { visitors && <VisitorsContainer>
+               <TableHeading>
+                <ColHead>Sr.No</ColHead>
+                <ColHead>Name</ColHead>
+                <ColHead>Date</ColHead>
+                {/* <ColHead>Action</ColHead> */}
+              </TableHeading>
+            <TableRows>
+              {visitors?.map((visitor) => (
+                <Row key={visitor.id}>
+                  <RowData>{visitor.id}</RowData>
+                  <RowData>{visitor.name}</RowData>
+                  <RowData>{visitor.date}</RowData>
+                  {/* <button>Manage</button> */}
+                </Row>
+              ))}
+            </TableRows>
+          </VisitorsContainer>}
+        </MngVisitorContainer>
       </Layout>
     </>
   );

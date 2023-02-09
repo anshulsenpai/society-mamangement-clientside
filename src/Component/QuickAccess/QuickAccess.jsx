@@ -14,7 +14,7 @@ const QuickAccess = () => {
             <img src={icon1} alt="icon" />
             <label>Bills</label>
         </QuickBox>
-        <QuickBox to='/add-visitors'>
+        <QuickBox to='/manage-visitors'>
             <img src={icon2} alt="icon" />
             <label>Visitors</label>
         </QuickBox>

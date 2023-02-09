@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../Component/Navbar/Navbar";
+import { addVisitor, clearVisitor } from "../../redux/visitorSlice";
 import {
   Actions,
   AddVisitorContainer,
@@ -12,11 +14,31 @@ import {
 
 const AddVisitor = () => {
 
-    const [visitorData, setVisitorData] = useState()
+    const visitors = useSelector(state => state.visitors)
+    // console.log(visitors)
 
+    const [visitorData, setVisitorData] = useState({
+      id : visitors.length + 1, 
+      name : "",
+      date : ""
+    })
+
+    // console.log(visitorData)
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    
   const handleSubmit = (e) => {
     e.preventDefault();
+    dispatch(addVisitor(visitorData))
+    navigate('/manage-visitors')
   };
+
+  const  handleClear = (e) => {
+    e.preventDefault();
+    dispatch(clearVisitor())
+    navigate('/manage-visitors')
+  } 
   return (
     <>
       <Navbar />
@@ -27,14 +49,15 @@ const AddVisitor = () => {
           </CloseBtn> */}
           <InputField>
             <label>Name</label>
-            <input required="required" type="text" />
+            <input onChange={(e) => setVisitorData({...visitorData, name: e.target.value})} type="text" />
           </InputField>
           <InputField>
             <label>Date</label>
-            <input required="required" type="date" />
+            <input onChange={(e) => setVisitorData({...visitorData, date: e.target.value})} type="date" />
           </InputField>
           <Actions>
             <button onClick={(e) => handleSubmit(e)}>Submit</button>
+            <button onClick={(e) => handleClear(e)}>Clear</button>
             <Link to="/manage-visitors">Cancel</Link>
           </Actions>
         </AddVisitorForm>
